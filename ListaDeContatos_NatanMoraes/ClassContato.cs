@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -57,9 +58,34 @@ namespace ListaDeContatos_NatanMoraes
         }
             
             //Construtor da Classe
+            public ClassContato() 
+            {
+                Nome = "Claúde";
+                Sobrenome = "Sim";
+                Telefone = "(11)99999-9999";
+            }
+
+             //Sobrecarga do método construtor da classe "ClassContato"
             public ClassContato(string nome, string sobrenome, string telefone)
             {
-
+            Nome = nome;
+            Sobrenome = sobrenome; 
+            Telefone = telefone;
             }
+
+        //Polimorfismo
+        //Todas as classes são filhas de object (Herança)
+        //"override" sobrescreve o método da classe pai (Polimorfismo)
+        public override string ToString()
+        {
+            string saida = string.Empty;
+            saida += String.Format("{0} {1}", Nome, Sobrenome);
+            saida += String.Format("({0}) {1}-{2}",
+                Telefone.Substring(0,2),
+                Telefone.Substring(2,5),
+                Telefone.Substring(7,4));
+
+            return saida;
+        }
     }
 }
