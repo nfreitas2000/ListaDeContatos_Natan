@@ -16,5 +16,20 @@ namespace ListaDeContatos_NatanMoraes
         {
             InitializeComponent();
         }
+
+        private void labelTelefone_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            ClassContato contato = new ClassContato();
+        }
     }
 }
