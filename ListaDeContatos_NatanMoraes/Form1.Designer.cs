@@ -128,6 +128,7 @@
             this.textBoxSobrenome.Name = "textBoxSobrenome";
             this.textBoxSobrenome.Size = new System.Drawing.Size(234, 31);
             this.textBoxSobrenome.TabIndex = 8;
+            this.textBoxSobrenome.TextChanged += new System.EventHandler(this.textBoxSobrenome_TextChanged);
             // 
             // textBoxTelefone
             // 

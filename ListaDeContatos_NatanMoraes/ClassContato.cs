@@ -46,13 +46,13 @@ namespace ListaDeContatos_NatanMoraes
             }
             set
             {
-                if (value.Length == 13)
+                if (value.Length == 11)
                 {
                     telefone = value;
                 }
                 else
                 {
-                    telefone = "(00) 00000-0000";
+                    telefone = "00000000000";
                 }
             }
         }
@@ -62,7 +62,7 @@ namespace ListaDeContatos_NatanMoraes
             {
                 Nome = "Claúde";
                 Sobrenome = "Sim";
-                Telefone = "(11)99999-9999";
+                Telefone = "11999999999";
             }
 
              //Sobrecarga do método construtor da classe "ClassContato"
@@ -80,7 +80,7 @@ namespace ListaDeContatos_NatanMoraes
         {
             string saida = string.Empty;
             saida += String.Format("{0} {1}", Nome, Sobrenome);
-            saida += String.Format("({0}) {1} {2}",
+            saida += String.Format("({0}) {1}-{2}",
                 Telefone.Substring(0,2),
                 Telefone.Substring(2,5),
                 Telefone.Substring(7,4));
